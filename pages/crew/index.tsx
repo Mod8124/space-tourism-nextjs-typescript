@@ -1,14 +1,14 @@
+import Cta from '../../src/components/cta';
+import { SectionStyled, ArticleStyled, DivTitleStyled, DivSpanStyled, SpanIndexStyled, ArticleImgStyled, DivImgContainerStyled, CrewTitleStyled } from '../../src/pagesStyles/crew/crew.styles';
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import Particles from 'react-particles';
 import ParticlesTheme from '../../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../../src/helpers/ParticlesFunctions';
-import Cta from '../../src/components/cta';
 import { ICrew } from '../../src/interfaces/api/interface';
 import { useGetSpacesQuery } from '../../src/features/apiSlice';
 import Hook from '../../src/hooks/Hook';
 import Image from 'next/image';
-import { SectionStyled, ArticleStyled, DivTitleStyled, DivSpanStyled, SpanIndexStyled, ArticleImgStyled, DivImgContainerStyled, CrewTitleStyled } from '../../src/pagesStyles/crew/crew.styles';
 
 const Index:NextPage = () => {
 

@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPlanetsStyled, DivPlanetStyled, DivsInfoStyled, ParaStyled } from '../../src/pagesStyles/destination/destination.styles';
 
 const Index:NextPage = () => {
+
   const { data }  = useGetSpacesQuery('destinations');
   const { DestinationParticle } = ParticlesTheme();
   const { particlesInit , particlesLoaded } = ParticlesFunction();
@@ -39,7 +40,7 @@ const Index:NextPage = () => {
             animate={{rotate:[0, 180, 360,720]}}
             transition={{ duration:40, repeat: Infinity }}
           >
-            {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} layout="fill" objectFit="contain"/>}
+            {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} priority={true} layout="fill" objectFit="contain"/>}
           </DivImgStyled>
 
         </ArticleImgStyled>

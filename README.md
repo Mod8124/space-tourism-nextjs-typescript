@@ -1,6 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Space-Tourism
 
-## Getting Started
+## Table of contents
+- [Overview](#overview)
+- [Screen](#screen)
+- [Features](#features)
+- [Scripts](#scripts)
+- [Build width](#build-with)
+- [Useful resources](#useful-resources)
+- [Continued development](#continued-development)
 
 First, run the development server:
 

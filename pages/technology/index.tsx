@@ -1,16 +1,16 @@
-import { useGetSpacesQuery } from '../../src/features/apiSlice';
-import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivCtaContainerStyled, DivNumberStyled, DivsNumbersStyled,
-  DivImgContainerStyled, TitleStyled
-} from '../../src/pagesStyles/technology/technology.styles';
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Particles from 'react-particles';
 import ParticlesTheme from '../../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../../src/helpers/ParticlesFunctions';
+import { useGetSpacesQuery } from '../../src/features/apiSlice';
 import Cta from '../../src/components/cta';
 import Hook from '../../src/hooks/Hook';
 import { ITechnology } from '../../src/interfaces/api/interface';
+import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivCtaContainerStyled, DivNumberStyled, DivsNumbersStyled,
+  DivImgContainerStyled, TitleStyled
+} from '../../src/pagesStyles/technology/technology.styles';
 import TechLogic from '../../src/hooks/TechLogic';
 
 const Index:NextPage = () => {
@@ -72,7 +72,7 @@ const Index:NextPage = () => {
             initial={{opacity:0,y:'100%'}}
             animate={{opacity:active ? [0.2,1]:[0.1,1], y:active?'0%':'4%'}}
           >
-            {data && <Image src={data && mediaQuery === false && data[index].images.landscape || data && mediaQuery === true && data[index].images.portrait} alt={data && data[index].portrait + 'img'}  layout="fill" objectFit={mediaQuery ? 'contain':'cover'}/>}
+            {data && <Image src={data && mediaQuery === false && data[index].images.landscape || data && mediaQuery === true && data[index].images.portrait} priority={true} alt={data && data[index].portrait + 'img'}  layout="fill" objectFit={mediaQuery ? 'contain':'cover'}/>}
           </DivImgContainerStyled>
         </ArticleImgStyled>
 

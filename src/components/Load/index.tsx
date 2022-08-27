@@ -19,7 +19,7 @@ const index:FC<ILoad> = ({complete}) => {
         initial={loadContaienr.initial}
         transition={loadContaienr.transition}
       >
-        <Image src="/assets/shared/logo.svg" alt="logo space-tourism" priority={true}  layout="fill" objectFit="contain"/>
+        <Image src="/assets/shared/logo.svg" alt="logo space-tourism"  layout="fill" objectFit="contain"/>
       </LoadingContainer>
       
       <LoadingTitleStyles

@@ -1,8 +1,8 @@
 import styles from '../styles/Error.module.css';
-import ErrorLogic from '../src/hooks/ErrorLogic';
 import Link from 'next/link';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import ErrorLogic from '../src/hooks/ErrorLogic';
 
 const Error = () => {
 

@@ -18,7 +18,7 @@ const Index:FC = () => {
       <HeaderStyledDesktop>
         <HeaderLogoContainer>
           <HeaderImgContainer className="logoContainer">
-            <Image src="/assets/shared/logo.svg" alt="logo space-tourism" priority={false} layout="fill" objectFit="contain"/>
+            <Image src="/assets/shared/logo.svg" alt="logo space-tourism"  layout="fill" objectFit="contain"/>
           </HeaderImgContainer>
         </HeaderLogoContainer>
 
@@ -48,7 +48,7 @@ const Index:FC = () => {
 
         <HeaderLogoContainer className="logo">
           <HeaderImgContainer className="logoContainer">
-            <Image src="/assets/shared/logo.svg" alt="logo space-tourism" priority={true}  layout="fill" objectFit="contain"/>
+            <Image src="/assets/shared/logo.svg" alt="logo space-tourism" layout="fill" objectFit="contain"/>
           </HeaderImgContainer>
         </HeaderLogoContainer>
 

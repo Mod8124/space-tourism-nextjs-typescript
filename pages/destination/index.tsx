@@ -1,8 +1,8 @@
-import { useGetSpacesQuery } from '../../src/features/apiSlice';
 import Head from 'next/head';
 import Particles from 'react-particles';
 import ParticlesTheme from '../../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../../src/helpers/ParticlesFunctions';
+import { useGetSpacesQuery } from '../../src/features/apiSlice';
 import Cta from '../../src/components/cta';
 import type { NextPage } from 'next';
 import { IDestinations } from '../../src/interfaces/api/interface';
@@ -11,7 +11,6 @@ import Image from 'next/image';
 import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPlanetsStyled, DivPlanetStyled, DivsInfoStyled, ParaStyled } from '../../src/pagesStyles/destination/destination.styles';
 
 const Index:NextPage = () => {
-
   const { data }  = useGetSpacesQuery('destinations');
   const { DestinationParticle } = ParticlesTheme();
   const { particlesInit , particlesLoaded } = ParticlesFunction();

@@ -1,13 +1,14 @@
-import Load from '../src/components/Load';
-import IndexLogic from '../src/hooks/IndexLogic';
-import { ParaExploreStyled, SectionStyled, ArticleStyled, ArticleCtaStyled, ArticleCtaContainerStyled } from '../src/pagesStyles/index.styles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 import Particles from 'react-particles';
 import ParticlesTheme from '../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../src/helpers/ParticlesFunctions';
 import Cta from '../src/components/cta';
 import { IndexText } from '../src/helpers/IndexText';
+import Load from '../src/components/Load';
+import IndexLogic from '../src/hooks/IndexLogic';
+import { ParaExploreStyled, SectionStyled, ArticleStyled, ArticleCtaStyled, ArticleCtaContainerStyled } from '../src/pagesStyles/index.styles';
 
 const Home: NextPage = () => {
 
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         id="tsparticles"
         init={ particlesInit }
         loaded={ particlesLoaded }
+        className={ styles.adios }
         options={ HomeParticle }
       />
       <SectionStyled>

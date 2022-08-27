@@ -22,7 +22,7 @@ export const HeaderStyledDesktop = styled.article`
 
 export const HeaderStyle = styled.header`
     padding-top:30px;
-    height:70px;
+    min-height:70px;
 `;
 
 export const HeaderLogoContainer = styled.div`

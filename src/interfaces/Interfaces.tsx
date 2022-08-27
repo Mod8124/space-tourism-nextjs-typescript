@@ -1,3 +1,7 @@
+export interface ILayout {
+    path?:string
+}
+
 export interface IHeaderStyle {
     path:string,
     value:string,

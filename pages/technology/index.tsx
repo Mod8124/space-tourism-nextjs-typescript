@@ -72,7 +72,7 @@ const Index:NextPage = () => {
             initial={{opacity:0,y:'100%'}}
             animate={{opacity:active ? [0.2,1]:[0.1,1], y:active?'0%':'4%'}}
           >
-            {data && <Image src={data && mediaQuery === false && data[index].images.landscape || data && mediaQuery === true && data[index].images.portrait} alt={data && data[index].portrait + 'img'}  layout="fill" objectFit={mediaQuery ? 'contain':'cover'}/>}
+            {data && <Image src={data && mediaQuery === false && data[index].images.landscape || data && mediaQuery === true && data[index].images.portrait} priority={true} alt={data && data[index].portrait + 'img'}  layout="fill" objectFit={mediaQuery ? 'contain':'cover'}/>}
           </DivImgContainerStyled>
         </ArticleImgStyled>
 

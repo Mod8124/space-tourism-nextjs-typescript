@@ -1,13 +1,13 @@
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import Image from 'next/image';
 import Particles from 'react-particles';
 import ParticlesTheme from '../../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../../src/helpers/ParticlesFunctions';
 import Cta from '../../src/components/cta';
-import { useGetSpacesQuery } from '../../src/features/apiSlice';
-import type { NextPage } from 'next';
-import { IDestinations } from '../../src/interfaces/api/interface';
 import Hook from '../../src/hooks/Hook';
+import { useGetSpacesQuery } from '../../src/features/apiSlice';
+import { IDestinations } from '../../src/interfaces/api/interface';
 import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPlanetsStyled, DivPlanetStyled, DivsInfoStyled, ParaStyled } from '../../src/pagesStyles/destination/destination.styles';
 
 const Index:NextPage = () => {
@@ -15,7 +15,7 @@ const Index:NextPage = () => {
   const { data }  = useGetSpacesQuery('destinations');
   const { index, changeIndex } = Hook();
   const { DestinationParticle } = ParticlesTheme();
-  const { particlesInit , particlesLoaded } = ParticlesFunction();
+  const { particlesInit } = ParticlesFunction();
 
   return (
     <main>
@@ -38,7 +38,7 @@ const Index:NextPage = () => {
             animate={{rotate:[0, 180, 360,720]}}
             transition={{ duration:40, repeat: Infinity }}
           >
-            {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} layout="fill" objectFit="contain"/>}
+            {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} priority={true} layout="fill" objectFit="contain"/>}
           </DivImgStyled>
 
         </ArticleImgStyled>

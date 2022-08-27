@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Particles from 'react-particles';
 import ParticlesTheme from '../../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../../src/helpers/ParticlesFunctions';
@@ -7,7 +8,6 @@ import { useGetSpacesQuery } from '../../src/features/apiSlice';
 import type { NextPage } from 'next';
 import { IDestinations } from '../../src/interfaces/api/interface';
 import Hook from '../../src/hooks/Hook';
-import Image from 'next/image';
 import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPlanetsStyled, DivPlanetStyled, DivsInfoStyled, ParaStyled } from '../../src/pagesStyles/destination/destination.styles';
 
 const Index:NextPage = () => {
@@ -27,9 +27,7 @@ const Index:NextPage = () => {
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
-        options={
-          DestinationParticle
-        }
+        options={ DestinationParticle }
       />
       <SectionStyled>
 
@@ -40,7 +38,7 @@ const Index:NextPage = () => {
             animate={{rotate:[0, 180, 360,720]}}
             transition={{ duration:40, repeat: Infinity }}
           >
-            {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} priority={true} layout="fill" objectFit="contain"/>}
+            {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} layout="fill" objectFit="contain"/>}
           </DivImgStyled>
 
         </ArticleImgStyled>

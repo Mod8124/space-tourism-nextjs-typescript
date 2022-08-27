@@ -1,6 +1,7 @@
 import Header from '../components/Header/Index';
 import Styles from '../../styles/Layout.module.css';
 import { useRouter } from 'next/router';
+import 'normalize.css/normalize.css';
 
 const Layout = ( { children }: any ) => {
 

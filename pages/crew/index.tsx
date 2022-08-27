@@ -63,7 +63,7 @@ const Index:NextPage = () => {
             initial={{ x: '100%', opacity: 0.8, scale:0.2, }} 
             animate={{ x: active ? '0%':'11%', opacity: active ? [0.2, 1] :[0.4, 1], scale:1, }} 
             value={index === 3 ? 'true' : ''}>
-            {data && <Image src={data && data[index].images.png} alt={data && data[index].name + 'img'} priority={true} layout="fill" objectFit="contain"></Image>}
+            {data && <Image src={data && data[index].images.png} alt={data && data[index].name + 'img'} layout="fill" objectFit="contain"></Image>}
           </DivImgContainerStyled>
         </ArticleImgStyled>
 

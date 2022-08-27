@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <Particles
         id="tsparticles"
         init={ particlesInit }
-        loaded={ particlesLoaded }
+        // loaded={ particlesLoaded }
         options={ HomeParticle }
       />
       <SectionStyled>

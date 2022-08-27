@@ -26,7 +26,7 @@ const Index:NextPage = () => {
       <Particles
         id="tsparticles"
         init={particlesInit}
-        loaded={particlesLoaded}
+        // loaded={particlesLoaded}
         options={ DestinationParticle }
       />
       <SectionStyled>

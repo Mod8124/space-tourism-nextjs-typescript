@@ -7,11 +7,11 @@ import 'normalize.css/normalize.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <ApiProvider api={apiSlice}>
+    <ApiProvider api={apiSlice}>
+      <Layout>
         <Component {...pageProps} />
-      </ApiProvider>
-    </Layout>
+      </Layout>
+    </ApiProvider>
   );
 }
 

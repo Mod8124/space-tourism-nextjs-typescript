@@ -13,9 +13,9 @@ import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPl
 const Index:NextPage = () => {
 
   const { data }  = useGetSpacesQuery('destinations');
+  const { index, changeIndex } = Hook();
   const { DestinationParticle } = ParticlesTheme();
   const { particlesInit , particlesLoaded } = ParticlesFunction();
-  const { index, changeIndex } = Hook();
 
   return (
     <main>

@@ -9,8 +9,11 @@ export const apiSlice = createApi({
       query:(id) => `/${id}`
     }),
 
+    getDestinations:builder.query({
+      query:() => '/destinations'
+    }),
  
   })
 });
 
-export const { useGetSpacesQuery } = apiSlice;
+export const { useGetSpacesQuery, useGetDestinationsQuery } = apiSlice;

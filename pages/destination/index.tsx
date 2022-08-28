@@ -5,14 +5,14 @@ import Particles from 'react-particles';
 import ParticlesTheme from '../../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../../src/helpers/ParticlesFunctions';
 import Cta from '../../src/components/cta';
-import { useGetSpacesQuery } from '../../src/features/apiSlice';
+import { useGetSpacesQuery, useGetDestinationsQuery } from '../../src/features/apiSlice';
 import Hook from '../../src/hooks/Hook';
 import { IDestinations } from '../../src/interfaces/api/interface';
 import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPlanetsStyled, DivPlanetStyled, DivsInfoStyled, ParaStyled } from '../../src/pagesStyles/destination/destination.styles';
 
 const Index:NextPage = () => {
 
-  const { data }  = useGetSpacesQuery('destinations');
+  const { data }  = useGetDestinationsQuery('');
   const { index, changeIndex } = Hook();
   
   const { DestinationParticle } = ParticlesTheme();

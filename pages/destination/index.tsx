@@ -53,8 +53,8 @@ const Index:NextPage = () => {
             ))}
           </DivsPlanetsStyled>
           <Cta 
-            title={data && data[index].name || ''}
-            para={data && data[index].description||''}
+            title={data && data[index].name || '....'}
+            para={data && data[index].description||'...'}
             type="destination"></Cta>
 
           <DivsInfoStyled>

@@ -12,7 +12,7 @@ import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPl
 
 const Index:NextPage = () => {
 
-  const { data }  = useGetSpacesQuery('destinations');
+  const { data, isLoading }  = useGetSpacesQuery('destinations');
   const { index, changeIndex } = Hook();
   
   const { DestinationParticle } = ParticlesTheme();
@@ -27,7 +27,6 @@ const Index:NextPage = () => {
       <Particles
         id="tsparticles"
         init={particlesInit}
-        // loaded={particlesLoaded}
         options={ DestinationParticle }
       />
       <SectionStyled>
@@ -40,6 +39,7 @@ const Index:NextPage = () => {
             transition={{ duration:40, repeat: Infinity }}
           >
             {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} priority={true} layout="fill" objectFit="contain"/>}
+            {isLoading && <h3>loading....</h3>}
           </DivImgStyled>
 
         </ArticleImgStyled>
@@ -53,8 +53,8 @@ const Index:NextPage = () => {
             ))}
           </DivsPlanetsStyled>
           <Cta 
-            title={data && data[index].name || '....'}
-            para={data && data[index].description||'...'}
+            title={isLoading && 'loading....' || data && data[index].name}
+            para={isLoading && 'loading...' ||data && data[index].description}
             type="destination"></Cta>
 
           <DivsInfoStyled>

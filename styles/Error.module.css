@@ -4,11 +4,12 @@
     display: flex;
     justify-content: center;
     background-color:#0B0D17;
+    z-index: 20;
     position: fixed;
     align-items: center;
-    top:0;
+    top:0px;
+    bottom: 0px;
     left:0;
-    z-index: 4;
     font-family: 'Barlow Condensed', sans-serif; 
 }
 

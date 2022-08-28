@@ -10,7 +10,7 @@ const Index:FC = () => {
 
   const router = useRouter();
   const { pathname } = router;
-  const { menuActive, handleMenuActive } = HeaderLogic();
+  const { menuActive, handleMenuActive, isFirefox } = HeaderLogic();
 
   return (
     <HeaderStyle>
@@ -26,7 +26,7 @@ const Index:FC = () => {
           <div className="line__line"></div>
         </HeaderLine>
 
-        <HeaderNav>
+        <HeaderNav blur={isFirefox}>
           <Link href={'/'}>
             <HeaderLink  path={pathname} value="/" mobile={false}> <span>00</span> Home</HeaderLink>
           </Link>

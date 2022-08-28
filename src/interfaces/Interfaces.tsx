@@ -1,3 +1,7 @@
+export interface IBlur {
+    blur:boolean
+}
+
 export interface ILayout {
     path?:string
 }

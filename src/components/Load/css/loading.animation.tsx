@@ -2,7 +2,7 @@ const loadingAnimation = ( ) => {
     
   const loadStyles = {
     initial:{
-      clipPath: 'inset(0 0 0 0)'
+      clipPath: 'inset(0 0 0 0)',
     },
     animate:{
       clipPath:' inset(50% 0 50% 0)',

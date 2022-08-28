@@ -12,7 +12,7 @@ import { ParaExploreStyled, SectionStyled, ArticleStyled, ArticleCtaStyled, Arti
 const Home: NextPage = () => {
 
   const {  HomeParticle } = ParticlesTheme();
-  const { particlesInit , particlesLoaded } = ParticlesFunction();
+  const { particlesInit  } = ParticlesFunction();
   const { text } = IndexText();
   const { animate, animationComplete } = IndexLogic();
 
@@ -30,6 +30,7 @@ const Home: NextPage = () => {
         options={ HomeParticle }
       />
       <SectionStyled>
+        {animate && <Load complete={animationComplete}></Load> }
 
         <ArticleCtaStyled>
           <ArticleCtaContainerStyled>
@@ -46,7 +47,6 @@ const Home: NextPage = () => {
         </ArticleStyled>
 
       </SectionStyled>
-      {animate && <Load complete={animationComplete}></Load> }
     </main>
   );
 };

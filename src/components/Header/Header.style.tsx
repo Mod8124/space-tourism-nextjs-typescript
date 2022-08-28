@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { IHeaderStyle } from '../../interfaces/Interfaces';
 import { Colors } from '../../helpers/Colors';
 const { colors } = Colors();
-import { IHeaderMenuActive } from '../../interfaces/Interfaces';
+import { IHeaderMenuActive, IBlur } from '../../interfaces/Interfaces';
+
 
 export const HeaderStyledDesktop = styled.article`
     display:none;
@@ -37,7 +38,6 @@ export const HeaderImgContainer = styled.div`
     height:80%;
     max-width:48px;
     max-height:48px;
-
 `;
 
 export const HeaderLine = styled.div`
@@ -56,9 +56,9 @@ export const HeaderLine = styled.div`
 
 `;
 
-export const HeaderNav = styled.nav`
+export const HeaderNav = styled.nav<IBlur>`
     position: relative;
-    z-index:3;
+    z-index:5;
     min-height:96px;
     height:100%;
     display:grid;
@@ -68,8 +68,9 @@ export const HeaderNav = styled.nav`
   
         background: rgba(255, 255, 255, 0.04);
         box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(81.5485px);
-        -webkit-backdrop-filter: blur(81.545px); 
+
+        backdrop-filter: ${(props)=>props.blur === false ? 'blur(81.55px)':'blur(0px)'};
+        -webkit-backdrop-filter:${(props)=>props.blur === false ? 'blur(81.55px)':'blur(0px)'};
 
     span {
         font-weight:600;
@@ -98,7 +99,7 @@ export const HeaderLink = styled.a<IHeaderStyle>`
         }
 `;
 
-//menu mobile
+// //menu mobile
 export const HeaderStyledMobile = styled.article`
    display:grid;
    min-height:70px;

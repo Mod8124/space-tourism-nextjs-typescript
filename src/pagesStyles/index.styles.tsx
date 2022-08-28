@@ -5,8 +5,8 @@ export const SectionStyled = styled.section`
     min-height: 80vh; 
     width:90%;
     margin:0 auto;
+    z-index:15;
     position: relative;
-    z-index: 5;  
     grid-template-columns:100%;
     transition:all 0.5s;
 
@@ -47,8 +47,6 @@ export const ParaExploreStyled = styled.p`
     background-color:white;
     cursor: pointer;
     transition: all 0.6s ease-in-out;
-    position: relative;
-    z-index: 2;
 
     @media screen and (min-width:700px) {
         max-width: 230px;

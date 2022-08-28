@@ -14,7 +14,7 @@ export const SectionStyled  = styled.section`
      margin:0 auto;
      grid-template-columns: 100%;
      position: relative;
-     z-index: 5;  
+     z-index: 1;  
      
      @media screen and (min-width:1025px) {
       grid-template-columns: 50% 50%;     
@@ -108,18 +108,12 @@ export const DivImgContainerStyled = styled(motion.div)<IDivImgContainerStyled>`
     position:relative;
     width:90%;
     height:90%;
-    min-height:200px;
     max-width:514px;
 
     @media screen and (min-width:1025px) {
         width:100%;
         height:100%;
-        top:${(props)=>props.value === 'true' ? '6%':'5%'};
-    }
-
-    @media screen and (min-width:1025px) {
-        width:90%;
-        height:90%;
-        top:${(props)=>props.value === 'true' ? '6%':'5%'};
+        max-width:700px;
+        top:${(props)=>props.value === 'true' ? '10%':'10%'};
     }
 `;

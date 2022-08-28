@@ -1,8 +1,14 @@
 import styled from 'styled-components';
+
 import { IHeaderStyle } from '../../interfaces/Interfaces';
+
 import { Colors } from '../../helpers/Colors';
+
 const { colors } = Colors();
+
 import { IHeaderMenuActive, IBlur } from '../../interfaces/Interfaces';
+
+
 
 
 export const HeaderStyledDesktop = styled.article`
@@ -16,21 +22,31 @@ export const HeaderStyledDesktop = styled.article`
         grid-template-columns:15% 20% 65%;
     }
 
+
+
     @media screen and (min-width: 1025px) {
         grid-template-columns:15% 40% 45%;
     }
+
 `;
+
+
+
 
 export const HeaderStyle = styled.header`
     padding-top:30px;
     min-height:70px;
 `;
 
+
+
+
 export const HeaderLogoContainer = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
 `;
+
 
 export const HeaderImgContainer = styled.div`
     position:relative;
@@ -39,6 +55,9 @@ export const HeaderImgContainer = styled.div`
     max-width:48px;
     max-height:48px;
 `;
+
+
+
 
 export const HeaderLine = styled.div`
     position: relative;
@@ -53,28 +72,31 @@ export const HeaderLine = styled.div`
         right:-20px;
         z-index:4;
     }
-
 `;
+
 
 export const HeaderNav = styled.nav<IBlur>`
     position: relative;
-    z-index:5;
+    z-index:3;
     min-height:96px;
     height:100%;
     display:grid;
     grid-template-columns: auto auto auto auto;
     justify-content:space-around;
     align-items:center;
-  
+
         background: rgba(255, 255, 255, 0.04);
+
         box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
 
-        backdrop-filter: ${(props)=>props.blur === false ? 'blur(81.55px)':'blur(0px)'};
-        -webkit-backdrop-filter:${(props)=>props.blur === false ? 'blur(81.55px)':'blur(0px)'};
+        backdrop-filter: ${(props)=>props.blur === true ? 'blur(0)' :'blur(81.5485px)'};
+
+        -webkit-backdrop-filter: ${(props)=>props.blur === true ? 'blur(0)' :'blur(81.5485px)'}; 
 
     span {
         font-weight:600;
     }
+
 `;
 
 
@@ -99,7 +121,9 @@ export const HeaderLink = styled.a<IHeaderStyle>`
         }
 `;
 
-// //menu mobile
+
+//menu mobile
+
 export const HeaderStyledMobile = styled.article`
    display:grid;
    min-height:70px;
@@ -108,12 +132,17 @@ export const HeaderStyledMobile = styled.article`
    @media screen and (min-width:700px) {
         display:none;
     }
+
 `;
+
 
 export const HeaderMobileContainer = styled.div`
     display:flex;
     justify-content:flex-end;
 `;
+
+
+
 
 export const HeaderMobileHambu = styled.div<IHeaderMenuActive>`
     height:3px;
@@ -150,6 +179,11 @@ export const HeaderMobileHambu = styled.div<IHeaderMenuActive>`
 `;
 
 
+
+
+
+
+
 export const HeaderMobileNav = styled.nav<IHeaderMenuActive>`
     background: rgba(255, 255, 255, 0.04);
     box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
@@ -169,6 +203,7 @@ export const HeaderMobileNav = styled.nav<IHeaderMenuActive>`
 `;
 
 
+
 export const HeaderDivMobile = styled.div<IHeaderMenuActive>`
    height:45%;
    display:grid;
@@ -178,4 +213,4 @@ export const HeaderDivMobile = styled.div<IHeaderMenuActive>`
    position: relative;
    z-index:10;
    top:16%;
-`;
+`; 

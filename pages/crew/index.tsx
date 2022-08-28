@@ -12,7 +12,7 @@ import { SectionStyled, ArticleStyled, DivTitleStyled, DivSpanStyled, SpanIndexS
 
 const Index:NextPage = () => {
 
-  const { data } = useGetSpacesQuery('crew');
+  const { data, isLoading } = useGetSpacesQuery('crew');
   const { index, changeIndex, active, changeActive } = Hook();
   const { CrewParticle } = ParticlesTheme();
   const { particlesInit , particlesLoaded } = ParticlesFunction();
@@ -42,9 +42,9 @@ const Index:NextPage = () => {
           </DivTitleStyled>
 
           <Cta 
-            subTitle={data && data[index].role}
-            title={data && data[index].name}
-            para={data && data[index].bio}
+            subTitle={isLoading && 'COMMANDER' ||data && data[index].role}
+            title={isLoading && 'DOUGLAS HURLEY' ||data && data[index].name}
+            para={isLoading && 'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.' || data && data[index].bio}
             type="crew"></Cta>
 
           <DivSpanStyled>
@@ -64,6 +64,7 @@ const Index:NextPage = () => {
             animate={{ x: active ? '0%':'11%', opacity: active ? [0.2, 1] :[0.4, 1], scale:1, }} 
             value={index === 3 ? 'true' : ''}>
             {data && <Image src={data && data[index].images.png} alt={data && data[index].name + 'img'} priority={true} layout="fill" objectFit="contain"></Image>}
+            {isLoading && <Image src="/assets/crew/image-douglas-hurley.png" alt="crew" priority={true} layout="fill" objectFit="contain"></Image>}
           </DivImgContainerStyled>
         </ArticleImgStyled>
 

@@ -14,7 +14,7 @@ export const SectionStyled  = styled.section`
      margin:0 auto;
      grid-template-columns: 100%;
      position: relative;
-     z-index: 1;  
+     z-index: 5;  
      
      @media screen and (min-width:1025px) {
       grid-template-columns: 50% 50%;     

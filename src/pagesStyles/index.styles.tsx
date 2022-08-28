@@ -5,7 +5,7 @@ export const SectionStyled = styled.section`
     min-height: 80vh; 
     width:90%;
     margin:0 auto;
-    z-index:15;
+    z-index:5;
     position: relative;
     grid-template-columns:100%;
     transition:all 0.5s;

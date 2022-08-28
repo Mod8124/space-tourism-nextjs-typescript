@@ -39,7 +39,7 @@ const Index:NextPage = () => {
             transition={{ duration:40, repeat: Infinity }}
           >
             {data && <Image src={data && data[index].images.webp} alt={data && data[index].name + 'img'} priority={true} layout="fill" objectFit="contain"/>}
-            {isLoading && <h3>loading....</h3>}
+            {isLoading && <Image src="/assets/destination/image-moon.webp" alt="moon" priority={true} layout="fill" objectFit="contain"/>}
           </DivImgStyled>
 
         </ArticleImgStyled>
@@ -53,19 +53,19 @@ const Index:NextPage = () => {
             ))}
           </DivsPlanetsStyled>
           <Cta 
-            title={isLoading && 'loading....' || data && data[index].name}
-            para={isLoading && 'loading...' ||data && data[index].description}
+            title={isLoading && 'Moon' || data && data[index].name}
+            para={isLoading && 'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.' ||data && data[index].description}
             type="destination"></Cta>
 
           <DivsInfoStyled>
 
             <div>
               <ParaStyled value="true">avg.distance</ParaStyled>
-              <ParaStyled>{data && data[index].distance}</ParaStyled>
+              <ParaStyled>{isLoading && '384,400 KM' || data && data[index].distance}</ParaStyled>
             </div>
             <div>
               <ParaStyled value="true">est.traveltime</ParaStyled>
-              <ParaStyled>{data && data[index].travel}</ParaStyled>
+              <ParaStyled>{isLoading && '3 DAYS' || data && data[index].travel}</ParaStyled>
             </div>
 
           </DivsInfoStyled>

@@ -8,12 +8,8 @@ export const apiSlice = createApi({
     getSpaces:builder.query<any, string>({
       query:(id) => `/${id}`
     }),
-
-    getDestinations:builder.query({
-      query:() => '/destinations'
-    }),
- 
+    
   })
 });
 
-export const { useGetSpacesQuery, useGetDestinationsQuery } = apiSlice;
+export const { useGetSpacesQuery,  } = apiSlice;

@@ -1,18 +1,18 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import Particles from 'react-particles';
 import ParticlesTheme from '../../src/helpers/ParticlesTheme';
 import ParticlesFunction from '../../src/helpers/ParticlesFunctions';
 import Cta from '../../src/components/cta';
-import { useGetSpacesQuery, useGetDestinationsQuery } from '../../src/features/apiSlice';
+import { useGetSpacesQuery } from '../../src/features/apiSlice';
 import Hook from '../../src/hooks/Hook';
 import { IDestinations } from '../../src/interfaces/api/interface';
+import Image from 'next/image';
 import { SectionStyled, ArticleCtaStyled, ArticleImgStyled, DivImgStyled, DivsPlanetsStyled, DivPlanetStyled, DivsInfoStyled, ParaStyled } from '../../src/pagesStyles/destination/destination.styles';
 
 const Index:NextPage = () => {
 
-  const { data }  = useGetDestinationsQuery('');
+  const { data }  = useGetSpacesQuery('destinations');
   const { index, changeIndex } = Hook();
   
   const { DestinationParticle } = ParticlesTheme();
@@ -53,8 +53,8 @@ const Index:NextPage = () => {
             ))}
           </DivsPlanetsStyled>
           <Cta 
-            title={data && data[index].name}
-            para={data && data[index].description}
+            title={data && data[index].name || ''}
+            para={data && data[index].description||''}
             type="destination"></Cta>
 
           <DivsInfoStyled>

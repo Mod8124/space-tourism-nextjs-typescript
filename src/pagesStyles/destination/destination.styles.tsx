@@ -73,6 +73,12 @@ export const DivImgStyled = styled(motion.div)`
     border-radius:50%;
     max-width:450px;
     max-height:450px;
+    margin:0 auto;
+    width:100%;
+
+    img {
+        margin:0 auto;
+    }
     
     @media screen and (min-width: 1025px) {
     max-width:550px;

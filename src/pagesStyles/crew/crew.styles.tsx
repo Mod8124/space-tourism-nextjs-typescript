@@ -106,9 +106,8 @@ export const ArticleImgStyled = styled.article`
 
 export const DivImgContainerStyled = styled(motion.div)<IDivImgContainerStyled>`
     position:relative;
-    width:90%;
-    height:90%;
-    max-width:514px;
+    width:100%;
+    height:140%;
 
     @media screen and (min-width:1025px) {
         width:100%;

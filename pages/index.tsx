@@ -29,8 +29,9 @@ const Home: NextPage = () => {
         // loaded={ particlesLoaded }
         options={ HomeParticle }
       />
+
+      {animate && <Load complete={animationComplete}></Load> }
       <SectionStyled>
-        {animate && <Load complete={animationComplete}></Load> }
 
         <ArticleCtaStyled>
           <ArticleCtaContainerStyled>

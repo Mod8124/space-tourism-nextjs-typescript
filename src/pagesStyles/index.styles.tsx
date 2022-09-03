@@ -54,8 +54,8 @@ export const ParaExploreStyled = styled.p`
     }
 
     @media screen and (min-width:1025px) {
-        max-width: 260px;
-        max-height: 260px;
+        max-width: 320px;
+        max-height: 320px;
     }
 
     &:hover {

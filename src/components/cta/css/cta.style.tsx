@@ -88,6 +88,8 @@ export const CtaParaStyle = styled.p<ICtaTypeStyle>`
    width:100%;
    margin:0 auto;
    text-align:center;
+   font-weight:500;
+   letter-spacing:1px;
    font-size:${(props)=>props.type === 'index' ? indexSize.desktop.para : 
     props.type === 'destination' ? destinationSize.desktop.para :
       props.type === 'crew' ? crewSize.desktop.para :

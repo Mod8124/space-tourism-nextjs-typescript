@@ -132,7 +132,7 @@ export const DivImgContainerStyled = styled(motion.div)`
    min-height:160px;
    
    @media screen and (min-width: 1025px) {
-    max-width:500px;
+    max-width:600px;
     left:12%;
     min-height:none;
    }

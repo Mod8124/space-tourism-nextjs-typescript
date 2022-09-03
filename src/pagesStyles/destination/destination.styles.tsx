@@ -75,7 +75,9 @@ export const DivImgStyled = styled(motion.div)`
     max-height:450px;
     
     @media screen and (min-width: 1025px) {
-      box-shadow: 0px 0px 40px 20px #0B0D17 !important;
+    max-width:550px;
+    max-height:550px;
+    box-shadow: 0px 0px 40px 20px #0B0D17 !important;
     }
 
 `;

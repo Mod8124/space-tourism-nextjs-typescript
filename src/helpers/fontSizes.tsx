@@ -2,9 +2,9 @@ const Fontsizes = () => {
 
   const indexSize = {
     desktop:{
-      subTitle:'28px',
+      subTitle:'32px',
       title:'150px',
-      para:'18px',
+      para:'20px',
       explore:'32px'
     },
     table:{
@@ -23,9 +23,9 @@ const Fontsizes = () => {
 
   const crewSize ={
     desktop:{
-      subTitle:'32px',
-      title:'56px',
-      para:'18px',
+      subTitle:'36px',
+      title:'66px',
+      para:'20px',
     },
     table:{
       subTitle:'24px',
@@ -41,9 +41,9 @@ const Fontsizes = () => {
 
   const technologySize = {
     desktop:{
-      subTitle:'16px',
+      subTitle:'20px',
       title:'56px',
-      para:'18px',
+      para:'20px',
     },
     table:{
       subTitle:'16px',
@@ -59,11 +59,11 @@ const Fontsizes = () => {
 
   const destinationSize = {
     desktop:{
-      title:'100px',
-      para:'18px',
-      links:'16px',
-      distance:'14px',
-      travel:'28px'
+      title:'120px',
+      para:'22px',
+      links:'18px',
+      distance:'16px',
+      travel:'32px'
     },
     table:{
       title:'80px',

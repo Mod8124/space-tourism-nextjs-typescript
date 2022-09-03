@@ -1,16 +1,17 @@
 # 👽Space-Tourism
 
 ## 📑Table of contents
-- [Overview](#📝overview)
-- [links](#⌨️links)
-- [Screen](#💻screen)
-- [Features](#✅features)
-- [Build width](#🔨build-with)
-- [api](#💻api)
-- [author](#👽author)
+- [Overview](#overview)
+- [links](#links)
+- [Screen](#screen)
+- [Features](#features)
+- [Build width](#build-with)
+- [Useful resources](#useful-resources)
+- [api](#api)
+- [author](#author)
 
 ## 📝Overview
-Static web Site(spa) about space tourism also is a [front-mentor's challange](https://www.frontendmentor.io/)
+Static web Site(spa) about space tourism also it's a [front-mentor's challange](https://www.frontendmentor.io/)
 
 ## ⌨️Links 
 - Solution URL: [Github](https://github.com/Mod8124/space-tourism-nextjs-typescript.git)
@@ -44,6 +45,84 @@ Code :
 - [typeScript](https://www.typescriptlang.org/)
 - [Eslint](https://eslint.org/)
 - [Rtk-Query](https://redux-toolkit.js.org/rtk-query/overview)
+
+## 📚Useful-resources
+Well the first, the main thing of the application is the background and the hooks index so
+
+How is works ?
+### background 
+layout is the responsible for the routing and the back every has header it doens't matter if is **<span style="color:red">404</span>** it's wrapper on a `div`
+```javascript
+ const Layout = ( { children }: any ) => {
+
+  const router = useRouter();
+  const { pathname } = router;
+  
+  return (
+    <LayoutStyled  path={pathname}>
+      <Header></Header>
+      {children}
+    </LayoutStyled>
+  );
+};
+
+export default Layout;
+```
+### Main Hook
+this hooks handle the index of the slider if the pages has one
+```javascript
+const Hook= () => {
+  const [index, setIndex] = useState<number>(0);
+  const [active, setActive] = useState<boolean>(true);
+
+  const changeActive = ():void => {
+    setActive(!active);
+  };
+
+  const changeIndex = (index:number):void => {
+    setIndex(index);
+  };
+
+  return {
+    index,
+    changeIndex,
+    active,
+    changeActive
+  };
+};
+
+export default Hook;
+```
+
+### Custom hook
+- header index logic
+this is a special hooks for see if the user is using firefox on chroome because `backgground-filter:blur()` break the solution on firefox so if it's false has a blur else it doesn't have it
+```javascript
+const HeaderLogic = () => {
+  const [menuActive, setMenuActive] = useState<boolean>(false);
+  const [isFirefox, setIsFirefox] = useState<boolean>(false);
+
+  useEffect(()=> {
+    let userAgent = navigator.userAgent;
+    if (userAgent.match(/firefox|fxios/i)) {
+      setIsFirefox(true);
+    }
+
+  },[]);
+ 
+  const handleMenuActive = ():void => {
+    setMenuActive(!menuActive);
+  };
+
+  return {
+    menuActive,
+    handleMenuActive,
+    isFirefox,
+  };
+};
+
+export default HeaderLogic;
+```
 
 ## 💻Api
 The api provides all the necesary for space tourism 

@@ -4,7 +4,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import HeaderLogic from './HeaderLogic';
 import { HeaderStyle, HeaderStyledDesktop, HeaderLogoContainer, HeaderLine, HeaderNav, HeaderLink, HeaderImgContainer,
-  HeaderStyledMobile, HeaderMobileContainer, HeaderMobileHambu, HeaderMobileNav, HeaderDivMobile} from './Header.style';
+  HeaderStyledMobile, HeaderMobileContainer, HeaderMobileHambu, HeaderMobileNav, HeaderDivMobile} from './css/Header.style';
 
 const Index:FC = () => {
 
@@ -48,7 +48,7 @@ const Index:FC = () => {
 
         <HeaderLogoContainer className="logo">
           <HeaderImgContainer className="logoContainer">
-            <Image src="/assets/shared/logo.svg" alt="logo space-tourism" layout="fill" objectFit="contain"/>
+            <Image src="/assets/shared/logo.svg" data-testid="logoD" alt="logo space-tourism" layout="fill" objectFit="contain"/>
           </HeaderImgContainer>
         </HeaderLogoContainer>
 

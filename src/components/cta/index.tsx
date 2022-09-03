@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { CtaStyle, CtaSubTitleStyle, CtaTitleStyle, CtaParaStyle } from './cta.style';
+import { CtaStyle, CtaSubTitleStyle, CtaTitleStyle, CtaParaStyle } from './css/cta.style';
 import { ICtaStyle } from '../../interfaces/Interfaces';
-import { CtaStyleAnimate, CtaTitleStyleAnimate } from './cta.animate';
+import { CtaStyleAnimate, CtaTitleStyleAnimate } from './css/cta.animate';
 
-const Index:FC<ICtaStyle> = ({subTitle, title, para, type}) => {
+const Index:FC<ICtaStyle> = ({ subTitle, title, para, type }) => {
   return (
     <CtaStyle
       initial={CtaStyleAnimate.initial}
@@ -13,6 +13,7 @@ const Index:FC<ICtaStyle> = ({subTitle, title, para, type}) => {
       {subTitle && <CtaSubTitleStyle type={type}>{subTitle}</CtaSubTitleStyle>}
 
       <CtaTitleStyle 
+        data-testid="test"
         initial={CtaTitleStyleAnimate.initial} 
         animate={CtaTitleStyleAnimate.animate} 
         type={type}>{title && title.split('').map((str, index)=>{

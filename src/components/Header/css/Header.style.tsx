@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { IHeaderStyle } from '../../interfaces/Interfaces';
+import { IHeaderStyle } from '../../../interfaces/Interfaces';
 
-import { Colors } from '../../helpers/Colors';
+import { Colors } from '../../../helpers/Colors';
 
 const { colors } = Colors();
 
-import { IHeaderMenuActive, IBlur } from '../../interfaces/Interfaces';
+import { IHeaderMenuActive, IBlur } from '../../../interfaces/Interfaces';
 
 
 
@@ -22,31 +22,22 @@ export const HeaderStyledDesktop = styled.article`
         grid-template-columns:15% 20% 65%;
     }
 
-
-
     @media screen and (min-width: 1025px) {
         grid-template-columns:15% 40% 45%;
     }
 
 `;
 
-
-
-
 export const HeaderStyle = styled.header`
     padding-top:30px;
     min-height:70px;
 `;
-
-
-
 
 export const HeaderLogoContainer = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
 `;
-
 
 export const HeaderImgContainer = styled.div`
     position:relative;
@@ -55,9 +46,6 @@ export const HeaderImgContainer = styled.div`
     max-width:48px;
     max-height:48px;
 `;
-
-
-
 
 export const HeaderLine = styled.div`
     position: relative;
@@ -89,9 +77,9 @@ export const HeaderNav = styled.nav<IBlur>`
 
         box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
 
-        backdrop-filter: ${(props)=>props.blur === true ? 'blur(0)' :'blur(81.5485px)'};
+        backdrop-filter: ${(props)=>props.blur === true ? 'blur(0)' :'blur(10.55px)'};
 
-        -webkit-backdrop-filter: ${(props)=>props.blur === true ? 'blur(0)' :'blur(81.5485px)'}; 
+        -webkit-backdrop-filter: ${(props)=>props.blur === true ? 'blur(0)' :'blur(10.55px)'}; 
 
     span {
         font-weight:600;

@@ -1,7 +1,6 @@
 import Header from '../components/Header/Index';
 import { useRouter } from 'next/router';
 import { LayoutStyled } from './layout.style';
-import IndexLogic from '../hooks/IndexLogic';
 
 const Layout = ( { children }: any ) => {
 

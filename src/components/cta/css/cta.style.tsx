@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Colors } from '../../helpers/Colors';
+import { Colors } from '../../../helpers/Colors';
 const { colors } = Colors();
-import Fontsizes from '../../helpers/fontSizes';
+import Fontsizes from '../../../helpers/fontSizes';
 const { indexSize, crewSize, destinationSize, technologySize } = Fontsizes();
-import { ICtaTypeStyle } from '../../interfaces/Interfaces';
+import { ICtaTypeStyle } from '../../../interfaces/Interfaces';
 import { motion } from 'framer-motion';
 
 export const CtaStyle = styled(motion.article)`

@@ -7,6 +7,7 @@ import Cta from '../src/components/cta';
 import { IndexText } from '../src/helpers/IndexText';
 import Load from '../src/components/Load';
 import IndexLogic from '../src/hooks/IndexLogic';
+import Link from 'next/link';
 import { ParaExploreStyled, SectionStyled, ArticleStyled, ArticleCtaStyled, ArticleCtaContainerStyled } from '../src/pagesStyles/index.styles';
 
 const Home: NextPage = () => {
@@ -26,10 +27,9 @@ const Home: NextPage = () => {
       <Particles
         id="tsparticles"
         init={ particlesInit }
-        // loaded={ particlesLoaded }
         options={ HomeParticle }
       />
-
+      
       {animate && <Load complete={animationComplete}></Load> }
       <SectionStyled>
 
@@ -44,7 +44,9 @@ const Home: NextPage = () => {
         </ArticleCtaStyled>
 
         <ArticleStyled>
-          <ParaExploreStyled>Explore</ParaExploreStyled>
+          <Link href={'/destination'}>
+            <ParaExploreStyled>Explore</ParaExploreStyled>
+          </Link>
         </ArticleStyled>
 
       </SectionStyled>

@@ -167,11 +167,6 @@ export const HeaderMobileHambu = styled.div<IHeaderMenuActive>`
 `;
 
 
-
-
-
-
-
 export const HeaderMobileNav = styled.nav<IHeaderMenuActive>`
     background: rgba(255, 255, 255, 0.04);
     box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
@@ -179,6 +174,7 @@ export const HeaderMobileNav = styled.nav<IHeaderMenuActive>`
     -webkit-backdrop-filter: blur(81.545px); 
     position:fixed;
     top:0;
+    right:0%;
     min-height:${(props)=>props.menuActive ? '100vh':'0vh'};
     width:70%;
     z-index:6;

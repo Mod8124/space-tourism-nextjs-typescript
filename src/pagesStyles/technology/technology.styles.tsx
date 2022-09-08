@@ -15,6 +15,9 @@ export const SectionStyled = styled.section`
     grid-template-columns: 100%;
     position: relative;
     z-index: 5;  
+    padding-top:25px;
+    padding-bottom:30px;
+    overflow:hidden;
 
     @media screen and (min-width:1025px) {
         width:88%;
@@ -28,9 +31,13 @@ export const ArticleCtaStyled = styled.article`
     grid-template-columns:90%;
     justify-content:center;
     grid-template-rows:30% 70%;
+    max-width:700px;
+    margin:0 auto;
 
     @media screen and (min-width:1025px) {
         order:0;
+        margin:0;
+        max-width:none;
     }
 `;
 
@@ -40,6 +47,7 @@ export const TitleStyled = styled.h2<IMobileTitle>`
         align-items:center;
         font-size:${generalFont.mobile.subTitle};
         letter-spacing:4.72px;
+        padding-bottom:20px;
         margin:0 auto;
         text-align:center;
         text-transform:uppercase;
@@ -57,6 +65,7 @@ export const TitleStyled = styled.h2<IMobileTitle>`
     @media screen and (min-width:1025px) {
             margin:0;
             text-align:start;
+            padding-bottom:0px;
             display:${(props)=>props.mobile === true ? 'none' :'flex'};
             font-size:${generalFont.desktop.subTitle};
     }
@@ -129,7 +138,7 @@ export const DivImgContainerStyled = styled(motion.div)`
    position:relative;
    width:100%;
    height:100%;
-   min-height:160px;
+   min-height:180px;
    
    @media screen and (min-width: 1025px) {
     max-width:600px;

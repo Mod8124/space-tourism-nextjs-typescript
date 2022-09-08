@@ -3,13 +3,14 @@ import { ILayout } from '../interfaces/Interfaces';
 
 export const LayoutStyled = styled.div<ILayout>`
 
-    height: 100vh;
+    min-height:100vh;
+    height:auto;
     width: 100%;
     background-size: cover;
     position: relative;
     z-index: 1;
-    overflow-y: hidden;
     background-color:#0B0D17;
+    background-position:center;
     background-image: ${(props)=>props.path === '/' ? 'url(\'/assets/home/background-home-mobile.jpg\')':
     props.path === '/crew' ? 'url(\'/assets/crew/background-crew-mobile.jpg\')':
       props.path === '/destination' ? 'url(\'/assets/destination/background-destination-mobile.jpg\')' :

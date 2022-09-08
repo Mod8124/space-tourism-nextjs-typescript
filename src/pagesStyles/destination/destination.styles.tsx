@@ -9,8 +9,10 @@ const { generalFont } = Fontsizes();
 
 export const SectionStyled = styled.section`
     display: grid;
-    min-height: 80vh; 
-    width:92%;
+    min-height: 90vh; 
+    width:100%;
+    padding-top:25px;
+    padding-bottom:25px;
     margin:0 auto;
     grid-template-columns: 100%;
     position: relative;
@@ -20,6 +22,9 @@ export const SectionStyled = styled.section`
     @media screen and (min-width:1025px) {
         grid-template-columns:50% 50%;
         width:88%;
+        min-height: 80vh; 
+        padding-top:0;
+        padding-bottom:0;
     }
 `;
 
@@ -27,6 +32,8 @@ export const ArticleImgStyled = styled.article`
     display:grid;
     grid-template-columns:100%;
     grid-template-rows:25% 75%;
+    min-height:300px;
+    padding-bottom:20px;
 
     h2 {
         color:white;
@@ -94,7 +101,8 @@ export const ArticleCtaStyled = styled.article`
     grid-template-columns:100%;
     grid-template-rows:20% 60% 20%;
     width:94%;
-    max-width:400px;
+    max-width:700px;
+    min-height:510px;
     margin:0 auto;
     text-align:center;
     justify-self:flex-end;
@@ -104,6 +112,7 @@ export const ArticleCtaStyled = styled.article`
     max-width:none;
     margin:0;
     text-align:start;
+    max-width:none;
     grid-template-rows:30% 50% 20%;
     }
 `;

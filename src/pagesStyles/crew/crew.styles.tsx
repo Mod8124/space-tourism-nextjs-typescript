@@ -10,14 +10,22 @@ import { IMobileTitle } from '../../interfaces/Interfaces';
 export const SectionStyled  = styled.section`
      display: grid;
      min-height: 80vh; 
-     width:88%;
+     height:100%;
+     width:100%;
      margin:0 auto;
      grid-template-columns: 100%;
+     padding-bottom:25px;
+     padding-top:25px;
      position: relative;
      z-index: 5;  
+     overflow:hidden;
      
      @media screen and (min-width:1025px) {
-      grid-template-columns: 50% 50%;     
+      grid-template-columns: 50% 50%; 
+      width:88%;  
+      padding-top:0;
+      padding-bottom:0;  
+      min-height:86vh;
     }
 `;
 
@@ -25,11 +33,18 @@ export const ArticleStyled = styled.article`
         height:100%;
         display:grid;
         order:1;
+        padding-top:20px;
+        min-height:360px;
+        max-width:700px;
+        margin:0 auto;
         grid-template-columns:100%;
         grid-template-rows:20 80%;
 
         @media screen and (min-width:1025px) {
             order:0;
+            padding-top:0px;
+            max-width:none;
+            margin:0;
             grid-template-rows:30% 50% 20%;
         }
 `;
@@ -97,6 +112,8 @@ export const ArticleImgStyled = styled.article`
     justify-content:center;
     border-bottom:2px solid rgba(255, 255, 255, 0.2);
     padding-top:20px;
+    min-height:300px;
+
 
     @media screen and (min-width: 1025px) {
         border-bottom:2px solid transparent;   
@@ -107,7 +124,7 @@ export const ArticleImgStyled = styled.article`
 export const DivImgContainerStyled = styled(motion.div)<IDivImgContainerStyled>`
     position:relative;
     width:100%;
-    height:140%;
+    height:100%;
 
     @media screen and (min-width:1025px) {
         width:100%;

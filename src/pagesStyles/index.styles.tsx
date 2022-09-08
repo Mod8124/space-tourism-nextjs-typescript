@@ -2,16 +2,26 @@ import styled from 'styled-components';
 
 export const SectionStyled = styled.section`
     display: grid;
+    padding-top:40px;
+    padding-bottom:25px;
     min-height: 80vh; 
-    width:90%;
+    height:100%;
+    width:100%;
     margin:0 auto;
     z-index:5;
     position: relative;
     grid-template-columns:100%;
     transition:all 0.5s;
+    overflow:hidden;
 
     @media screen and (min-width:1025px) {
         grid-template-columns: 50% 50%;
+        width:98%;
+        padding-top:0px;
+        padding-bottom:0;
+    }
+
+    @media screen and (min-width: 1500px) {
         width:88%;
     }
 `;
@@ -30,6 +40,7 @@ export const ArticleStyled = styled.article`
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height:290px;
 `;
 
 export const ParaExploreStyled = styled.p`
